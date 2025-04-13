@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Cellbit;
+    src: url(../FONT/Cellbit.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cellbit, sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(80deg,
+    #1b3b2e,
+    #132a20,
+    #0b1a13,
+    #0b1a13,
+    #08110c 
+  );
+  background-size: 400% 400%;
+  animation: gradienteAnimado 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradienteAnimado {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 1rem;
+    width: 100%;
+    /*max-width: 1000px;*/
+    padding: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.texto .fala {
+    color: #fff;
+    font-size: 4.5rem;
+    margin: -10px 0px 0px;
+    text-shadow:
+    0 0 5px rgba(87, 143, 106, 0.4),
+    0 0 10px rgba(87, 143, 106, 0.4),
+    0 0 20px rgba(87, 143, 106, 0.5),
+    0 0 40px rgba(87, 143, 106, 0.6);
+}
+
+.personagem img {
+    height: 69vh;
+    object-fit: contain;
+    margin: -20px 0px -15px 0px;
+}
+
+.entrada input {
+    width: 50%;
+    padding: 2rem;
+    font-size: 1.2rem;
+    margin: -27px 0px 0px;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #b3f793;
+    border-radius: 10px;
+
+}
+
+.entrada ::placeholder {
+    font-family: Cellbit, sans-serif;
+    color: #b3f793bd;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35rem;
+    justify-items: center;
+    width: 55%;
+    margin: -60px auto auto auto;
+}
+
+.botoes button {
+    font-family: Cellbit, sans-serif;
+    background-color: #000;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botoes .confirma {
+    padding: 0.5rem 2rem;
+}
+
+.botoes .dica {
+    padding: 0.5rem 36.4px;
+}
+
+.botoes button:hover {
+    color: #b3f793;
+}

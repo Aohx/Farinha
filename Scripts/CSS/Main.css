@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Undertale;
+    src: url(../FONT/Undertale-Mono.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../IMG/Fundo.png) no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 15px auto; /*espaco ta aqui*/
+    justify-items: center;
+}
+
+.texto {
+    font-family: Undertale, sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: -20px 0px -25px 0px;
+    min-height: 10.2rem;
+}
+
+.conjunto-btn {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.personagem, img {
+    height: 85vh;
+    object-fit: contain;
+}
+
+.btn {
+    font-family: Undertale, sans-serif;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-esquerda, .btn-direita, .btn-next {
+    transform: translateY(140px);
+}
+
+.btn-esquerda:hover, .btn-direita:hover, .btn-next:hover {
+    color: rgb(88, 88, 88);
+}
+
+.btn-esquerda {
+    position: relative;
+    right: 20px;
+}
+
+.btn-direita {
+    position: relative;
+    left: 20px;
+}
+
+.btn-next {
+    position: relative;
+    left: 20px;
+}
