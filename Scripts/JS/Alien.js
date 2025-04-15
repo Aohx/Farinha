@@ -5,5 +5,6 @@ document.querySelector(".confirma").addEventListener("click", () => {
         window.location.href = "../PAGES/Final.html";
     } else {
         alert("Resposta errada.");
+        document.querySelector(".resposta").value = '';
     };
 });
