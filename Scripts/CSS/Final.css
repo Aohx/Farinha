@@ -25,7 +25,8 @@ body {
     100% { background-position: 1000px 1000px; }
 }
 
-.dancin-esq {
+.dancin-esq,
+.dancin-dir{
     max-width: 10%;
     display: flex;
     flex-direction: column;
@@ -33,22 +34,45 @@ body {
     align-items: center;
 }
 
-.dancin-esq img, .dancin-dir img {
+.dancin-esq img,
+.dancin-dir img {
     height: 150px;
     margin-bottom: 30px;
     margin-top: 20px;
 }
 
-.dancin-dir {
-    max-width: 10%;
+.bloco1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+}
+
+.playlist {
+    margin-top: 20px;
+}
+
+.cartao img{
+    height: 25vh;
+    object-fit: contain;
+}
+
+.cartao {
+    margin-top: 20px;
+}
+
+.creditos {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.conteudo {
-    width: 80%;
-    display: flex;
-    justify-content: center;
+.creditos h1 {
+    margin: 5px;
+}
+
+.creditos p{
+    margin: 10px;
 }
