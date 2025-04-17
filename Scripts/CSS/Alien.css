@@ -44,6 +44,9 @@ body {
 .texto .fala {
     color: #fff;
     font-size: 4.5rem;
+    -webkit-user-select: none; /*não deixar copiar*/
+    -ms-user-select: none;
+    user-select: none;
     margin: -10px 0px 0px;
     text-shadow:
     0 0 5px rgba(87, 143, 106, 0.4),
@@ -88,7 +91,7 @@ body {
 .botoes button {
     font-family: Cellbit, sans-serif;
     background-color: #000;
-    color: #ffffff;
+    color: #b3f793bd;
     font-size: 1rem;
     border: none;
     border-radius: 4px;
@@ -100,7 +103,7 @@ body {
 }
 
 .botoes .dica {
-    padding: 0.5rem 36.4px;
+    padding: 0.5rem 34.5px;
 }
 
 .botoes button:hover {
