@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
     margin: 0;
     padding: 0;
@@ -37,7 +39,7 @@ body {
 .dancin-esq img,
 .dancin-dir img {
     height: 150px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     margin-top: 20px;
 }
 
@@ -46,10 +48,21 @@ body {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 100vh;
 }
 
 .playlist {
+    margin-top: 20px;
+}
+
+.bloco2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* ocupa o espaço restante da .bloco1 */
+    width: 100%;
+}
+
+.cartao {
     margin-top: 20px;
 }
 
@@ -58,8 +71,38 @@ body {
     object-fit: contain;
 }
 
-.cartao {
-    margin-top: 20px;
+.cartao img:hover {
+    animation: dancaGatinho 1s;
+    animation-iteration-count: infinite;
+
+    cursor: pointer;
+    opacity: 95%;
+  }
+  
+@keyframes dancaGatinho {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.frase {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frase h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 8px;
+    
+}
+
+.espaco {
+    flex-grow: 1; /* ocupa o espaço entre cartao e creditos */
 }
 
 .creditos {
@@ -67,12 +110,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.creditos h1 {
-    margin: 5px;
+    margin-bottom: 30px;
 }
 
 .creditos p{
-    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+}
+
+.creditos img {
+    margin: -4px 1px;
 }
