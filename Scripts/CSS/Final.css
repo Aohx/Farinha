@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: Undertale;
+    src: url(../FONT/Undertale-Mono.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -95,7 +100,7 @@ body {
 
 .frase h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 500;
     margin: 8px;
     
@@ -115,6 +120,7 @@ body {
 
 .creditos p{
     font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
     margin: 5px;
 }
 

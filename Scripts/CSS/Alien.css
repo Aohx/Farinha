@@ -5,6 +5,11 @@
     src: url(../FONT/Cellbit.ttf);
 }
 
+@font-face {
+    font-family: Undertale;
+    src: url(../FONT/Undertale-Mono.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -77,6 +82,60 @@ body {
 .entrada ::placeholder {
     font-family: Cellbit, sans-serif;
     color: #b3f793bd;
+}
+
+.scroll-container {
+    max-height: 250px;
+    overflow-y: auto;
+}
+  
+.scroll-container::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ffffff45;
+    border-radius: 5px;
+}
+  
+.scroll-container::-webkit-scrollbar-track {
+    background-color: #ffffff45;
+}
+
+.menu {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #b3f79340;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 0 10px #b3f7931c;
+    z-index: 1000;
+}
+  
+.menu table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.menu th, .menu td {
+    padding: 5px 35px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff45;
+    font-size: 20px;
+}
+
+.letra {
+    font-family: Undertale;
+}
+  
+.simbolo {
+    font-family: Cellbit;
+}
+  
+.hidden {
+    display: none;
 }
 
 .botoes {
