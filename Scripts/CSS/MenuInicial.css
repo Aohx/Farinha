@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Undertale;
+    src: url(../FONT/Undertale-Mono.otf);
+}
+
+.tela-inicial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.tela-inicial h1 {
+    font-family: Undertale;
+    font-size: 2rem;
+    margin: 0px 0px 20px 0px;
+}
+
+.conteudo-inicial {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btn-iniciar {
+    font-family: Undertale;
+    border-radius: 10px 5px;
+    background-color: #dadada;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#btn-iniciar:hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}

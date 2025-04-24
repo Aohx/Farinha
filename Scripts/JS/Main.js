@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const btnIniciar = document.getElementById("btn-iniciar");
+  const telaInicial = document.getElementById("tela-inicial");
+
+  const audio = new Audio("./Scripts/MUSIC/Undertale - Shop.mp3");
+
+  btnIniciar.addEventListener("click", () => {
+      audio.volume = 0.5;
+      audio.play();
+      telaInicial.style.display = "none";
+  });
+});
+
 const dialogoSim = [
   "ah, eu pensei que seria mais difícil.<br> quer mesmo?",
   "que bom! enfim, eu tenho uma última coisa pra te<br> mostrAAAAAAA SOCORRO"
@@ -76,6 +89,7 @@ function verificarCaminho() {
         //muda pagina
         if (indexDialogoNao === 5){
           setTimeout(function() {
+          sessionStorage.setItem("tocarMusica", "true");
           window.location.href = "Scripts/PAGES/Alien.html";
           }, 1);
         };
@@ -123,8 +137,50 @@ botaoSim.addEventListener("click", function() {
   document.querySelector(".personagem img").src = "Scripts/IMG/Default.png";
 });
 
+function moverBotaoAleatorio(botao) {
+  const margem = 20;
+
+  const limiteX = window.innerWidth - botao.offsetWidth - margem;
+  const limiteY = window.innerHeight - botao.offsetHeight - margem;
+
+  let novoX = Math.floor(Math.random() * (limiteX + 1));
+  let novoY = Math.floor(Math.random() * (limiteY + 1));
+
+  botao.style.position = "absolute";
+  botao.style.left = `${novoX}px`;
+  botao.style.top = `${novoY}px`;
+
+  const rect = botao.getBoundingClientRect();
+  if (
+    rect.right > window.innerWidth ||
+    rect.left < 0 ||
+    rect.bottom > window.innerHeight ||
+    rect.top < 0
+  ) {
+    moverBotaoAleatorio(botao);
+  }
+
+  const hitbox = document.querySelector('.personagem .hitbox');
+  verificarSobreposicao(botao, hitbox);
+}
+
+function verificarSobreposicao(aEl, bEl) {
+  const a = aEl.getBoundingClientRect();
+  const b = bEl.getBoundingClientRect();
+
+  const overlap = !(
+    a.right  < b.left ||
+    a.left   > b.right ||
+    a.bottom < b.top ||
+    a.top    > b.bottom
+  );
+
+  aEl.classList.toggle('destaque', overlap);
+}
+
 botaoNao.addEventListener("click", function() {
   caminho = "nao";
   verificarCaminho();
   trocarImagemNao();
+  moverBotaoAleatorio(botaoNao);
 });
