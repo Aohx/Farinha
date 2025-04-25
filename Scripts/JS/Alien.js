@@ -1,7 +1,7 @@
 document.querySelector(".confirma").addEventListener("click", () => {
     const resposta = document.querySelector(".resposta").value.trim();
 
-    if (resposta.toLowerCase() === "eu quero namorar voce" || resposta.toLowerCase() === "euqueronamorarvoce") {
+    if (resposta.toLowerCase() === "eu quero namorar voce" || resposta.toLowerCase() === "euqueronamorarvoce" || resposta.toLowerCase() === "eu quero namorar você" || resposta.toLowerCase() === "euqueronamorarvocê") {
         window.location.href = "../PAGES/Final.html";
     } else {
         alert("Resposta errada.");

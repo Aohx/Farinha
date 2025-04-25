@@ -17,10 +17,11 @@
 .tela-inicial h1 {
     font-family: Undertale;
     font-size: 2rem;
-    margin: 0px 0px 20px 0px;
+    margin: 0px -20px -20px 0px;
 }
 
 .conteudo-inicial {
+    margin: 0px -20px;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -30,11 +31,12 @@
 }
 
 #btn-iniciar {
+    margin: -20px -20px 0px 0px;
     font-family: Undertale;
     border-radius: 10px 5px;
     background-color: #dadada;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -42,4 +44,8 @@
 #btn-iniciar:hover {
     background-color: #5e5e5e;
     color: #fff;
+}
+
+pre code {
+    color: #193e00
 }
